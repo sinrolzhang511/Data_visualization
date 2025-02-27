@@ -1,1 +1,2 @@
-venv/final_venv/
+# 忽略 virtual environemnt 
+/Data_visualization/final_venv/
