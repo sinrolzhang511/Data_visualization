@@ -80,7 +80,7 @@ Studying these variables between 2000 and 2022 is particularly meaningful due to
 
 ## 🔍 Critical Analysis
 
-### **Limitations of the Current Approach**
+### ** Limitations of the Current Approach**
 
 - **Limited Scope of Indicators**: The dashboard focuses on only three key indicators—CO₂ emissions, GDP per capita, and the percentage of chemicals in manufacturing. However, industrialization and economic development are influenced by a broader set of factors, such as energy consumption, labor productivity, foreign direct investment (FDI), and infrastructure development. Incorporating additional economic and industrial indicators would provide a more comprehensive analysis.
 - **No Real-Time Data**: The dataset only covers the period from 2000 to 2022, and it is static rather than continuously updated. Given the rapidly changing nature of global industry, having real-time or more frequently updated data would provide more timely insights.
