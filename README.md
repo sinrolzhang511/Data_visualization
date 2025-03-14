@@ -14,17 +14,7 @@ Ensure you have the following installed on your system:
 
 ### Clone the Repository
 ```sh
-git clone https://github.com/你的GitHub用户名/Global-Industrial-Indicators.git
-cd Global-Industrial-Indicators
-```
-
-### Install Dependencies
-Create a virtual environment and install required libraries:
-```sh
-python -m venv env
-source env/bin/activate  # On Windows use `env\Scripts\activate`
-pip install -r requirements.txt
-```
+git clone https://github.com/sinrolzhang511/Data_visualization
 
 ### Run the Streamlit App
 ```sh
@@ -51,11 +41,7 @@ Once the application is running, open the provided local URL in your browser. Yo
 ## 📂 Data Management
 
 ### 🔗 Data Source
-The dataset is compiled from multiple global databases, including:
-- World Bank Open Data
-- Global Carbon Atlas
-- OECD Industrial Database
-- United Nations Industrial Development Organization (UNIDO)
+The dataset is compiled from World Bank Open Data
 
 The data has been cleaned and structured into a CSV file (`df_filtered.csv`) stored in the `/data/processed/` directory.
 
@@ -84,16 +70,11 @@ The data has been cleaned and structured into a CSV file (`df_filtered.csv`) sto
 
 ---
 
-## 📌 Data Preparation Decisions
+## 📌 Methodology explanation
 
-### Why Standardize Country Codes?
-Ensures seamless data integration across multiple sources and prevents mismatches in mapping.
+Understanding the relationships between CO₂ emissions, GDP per capita, and the percentage of chemicals in manufacturing is crucial for assessing their combined impact on society, the environment, and industrial development. CO₂ emissions are a key indicator of environmental impact and climate change, while GDP per capita reflects economic prosperity and living standards. The percentage of chemicals in manufacturing serves as a proxy for industrial intensity and technological advancement, given the chemical sector’s pivotal role in various industries.  
 
-### Why Adjust for Missing Values?
-Prevents incomplete insights due to missing data, ensuring a comprehensive analysis.
-
-### Why Include Multiple Economic Indicators?
-Captures the interplay between industrialization, economic growth, and environmental impact.
+Studying these variables between 2000 and 2022 is particularly meaningful due to significant global changes during this period. The early 2000s marked rapid industrialization in emerging economies, while advancements in technology and increased environmental awareness shaped global production patterns. Additionally, international climate agreements, such as the Paris Agreement, gained momentum during this time, influencing emission trends and industrial practices. Analyzing this period provides valuable insights into how economic growth, environmental impact, and industrial strategies have evolved in response to these global shifts.
 
 ---
 
@@ -101,21 +82,27 @@ Captures the interplay between industrialization, economic growth, and environme
 
 ### **Limitations of the Current Approach**
 
-- **Limited Scope of Indicators**: The dataset does not include other crucial industrial metrics like energy consumption or labor productivity.
-- **No Real-Time Data**: The dataset does not update in real-time, meaning recent fluctuations in industrial output may not be reflected.
+- **Limited Scope of Indicators**: The dashboard focuses on only three key indicators—CO₂ emissions, GDP per capita, and the percentage of chemicals in manufacturing. However, industrialization and economic development are influenced by a broader set of factors, such as energy consumption, labor productivity, foreign direct investment (FDI), and infrastructure development. Incorporating additional economic and industrial indicators would provide a more comprehensive analysis.
+- **No Real-Time Data**: The dataset only covers the period from 2000 to 2022, and it is static rather than continuously updated. Given the rapidly changing nature of global industry, having real-time or more frequently updated data would provide more timely insights.
+- **Data Gaps and Aggregation Issues**:Some countries have missing or incomplete data, requiring the use of regional averages or interpolation methods. While these methods help fill gaps, they may introduce biases or inaccuracies. Additionally, industrial classifications and data collection standards vary between countries, which could affect comparability.
+- **Correlation vs. Causation Challenge**:While visualizing relationships between CO₂ emissions, GDP per capita, and the percentage of chemicals in manufacturing helps identify trends, it does not establish causation. For instance, higher GDP per capita could be linked to greater industrial efficiency, but it might also be due to a service-based economy rather than manufacturing growth. Future analysis could incorporate causal inference techniques to better understand these relationships.
 - **Data Gaps in Certain Countries**: Some regions have sparse data availability, leading to reliance on estimations.
 
-### **Future Improvements & Directions**
+### ** Ptential Improvements & Future Directions**
 
 #### 📌 Expanding Data Coverage
-- Adding metrics such as energy consumption, trade balance, and industrial automation rates.
-- Incorporating real-time API data sources for up-to-date insights.
+- Include more economic and industrial indicators such as labor productivity, trade balance, energy consumption, and renewable energy adoption.
+- Integrate real-time data APIs to keep the dashboard updated with the latest information.
 
-#### 🎥 Time-Series Animation
+#### 🎥 User Interactivity and Customization
 - Enhancing the animated visualization to track global trends dynamically over the years.
+- Allow users to select multiple countries for comparative analysis.
+- Provide filtering options based on economic regions (e.g., OECD, BRICS) or income groups (low-income, middle-income, high-income).
+- Enable users to customize visualization settings, such as adjusting inflation for GDP comparisons.
 
-#### 📊 Machine Learning Integration
-- Using predictive models to forecast industrial trends based on historical data.
+#### 📊 Enhanced Visualization Techniques
+- Introduce additional charts such as heatmaps for regional comparisons or scatter plots with regression analysis to explore relationships between variables more precisely.
+- Implement animated time-series visualizations to showcase trends dynamically, making it easier to identify industrial shifts over time.
 
 ---
 
@@ -132,9 +119,6 @@ By providing an interactive and user-friendly data visualization tool, this proj
 
 ## 🔗 Additional Resources
 - [World Bank Data](https://data.worldbank.org/)
-- [OECD Industrial Indicators](https://www.oecd.org/)
-- [Global Carbon Atlas](http://www.globalcarbonatlas.org/)
-- [UNIDO Industrial Data](https://www.unido.org/statistics)
 
 For contributions, feedback, or discussions, please feel free to reach out via GitHub Issues!
 
